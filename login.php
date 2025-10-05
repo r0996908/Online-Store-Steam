@@ -12,6 +12,8 @@ if (!empty($_POST)) {
     $Password = $_POST['Password'];
 
     if (CorrectLogin($Email, $Password)) {
+        $Cookiesign = $Email;
+        setcookie("LoggedIn", $Cookiesign);
         header('Location: index.php');
     } else; 
 }

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+$cookie = $_COOKIE['LoggedIn'];
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,5 +10,6 @@
 </head>
 <body>
    <p>Welkom, je bent ingelogd</p> 
+   <a href="login.php">log out</a>
 </body>
 </html>
