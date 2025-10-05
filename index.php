@@ -1,6 +1,11 @@
 <?php
 $cookie = $_COOKIE['LoggedIn'];
 $salt = "HJGgcéè!'TDU($64µ8L.0";
+$frags = explode(",", $cookie);
+
+if($frags[1] !== md5($frags[0].$salt)) {
+    header('Location: login.php');
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
