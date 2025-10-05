@@ -12,7 +12,8 @@ if (!empty($_POST)) {
     $Password = $_POST['Password'];
 
     if (CorrectLogin($Email, $Password)) {
-        $Cookiesign = $Email;
+        $salt = "HJGgcéè!'TDU($64µ8L.0";
+        $Cookiesign = $Email . "," . md5($Email.$salt);
         setcookie("LoggedIn", $Cookiesign, time()+60*60*24*30);
         header('Location: index.php');
     } else; 
