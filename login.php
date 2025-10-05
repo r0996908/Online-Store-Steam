@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php 
+function CorrectLogin($p_email, $p_wachtwoord) {
+    if ($p_email === "salma@steam.com" && $p_wachtwoord === "12345isnotsecure") {
+        print "nee!!";
+    } else {
+        return false;
+    }
+}
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
