@@ -20,6 +20,7 @@ if (!empty($_POST)) {
 }
 
 
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +33,10 @@ if (!empty($_POST)) {
         <div>
             <form action="" method="post">
                 <h2>Login</h2>
+
+                <div style="color:red" class="LoginError">
+                    <p>Ongeldige email en/of wachtwoord.</p>
+                </div>
 
                 <div class= "fillbox">
                     <label for="Email">E-mail</label>
