@@ -16,7 +16,9 @@ if (!empty($_POST)) {
         $Cookiesign = $Email . "," . md5($Email.$salt);
         setcookie("LoggedIn", $Cookiesign, time()+60*60*24*30);
         header('Location: index.php');
-    } else; 
+    } else {
+        $error = "Ongeldige email en/of wachtwoord.";
+    }
 }
 
 
