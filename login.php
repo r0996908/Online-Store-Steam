@@ -13,7 +13,7 @@ if (!empty($_POST)) {
 
     if (CorrectLogin($Email, $Password)) {
         $Cookiesign = $Email;
-        setcookie("LoggedIn", $Cookiesign);
+        setcookie("LoggedIn", $Cookiesign, time()+60*60*24*30);
         header('Location: index.php');
     } else; 
 }

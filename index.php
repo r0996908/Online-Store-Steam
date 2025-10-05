@@ -1,5 +1,6 @@
 <?php
 $cookie = $_COOKIE['LoggedIn'];
+$salt = "HJGgcéè!'TDU($64µ8L.0";
 
 ?><!DOCTYPE html>
 <html lang="en">
