@@ -36,9 +36,11 @@ if (!empty($_POST)) {
             <form action="" method="post">
                 <h2>Login</h2>
 
+                <?php if (isset($error)):?>
                 <div style="color:red" class="LoginError">
-                    <p>Ongeldige email en/of wachtwoord.</p>
+                    <p><?php echo $error;?></p>
                 </div>
+                <?php endif;?>
 
                 <div class= "fillbox">
                     <label for="Email">E-mail</label>
