@@ -1,6 +1,6 @@
 <?php 
 function CorrectLogin($p_email, $p_wachtwoord) {
-    if ($p_email === "salma@steam.com" && $p_wachtwoord === "12345isnotsecure") {
+    if ($p_email === "salma@claysme.com" && $p_wachtwoord === "12345isnotsecure") {
         return true;
     } else {
         return false;
