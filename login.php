@@ -53,12 +53,12 @@ if (!empty($_POST)) {
                 </div>
 
                 <div class= "fillbox">
-                    <label for="Password">Wachtwoord</label>
+                    <label for="Password">password</label>
                     <input type="password" name="Password">
                 </div>
 
                 <div class= "fillbox">
-                    <input type="submit" value="Log In">
+                    <input type="submit" value="LogIn">
                 </div>
             </form>
         </div>
