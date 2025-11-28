@@ -1,5 +1,10 @@
 <?php 
 function CorrectLogin($p_email, $p_wachtwoord) {
+    $conn = new PDO('mysql:host=localhost;dbname=claysme', "root", "");
+    $statement = $conn->prepare('SELECT * FROM users WHERE email = :email');
+    $statement->bindValue(":email", $p_email);
+    $statement->execute();
+    $users = $statement->fetch(PDO::FETCH_ASSOC);
     if ($p_email === "salma@claysme.com" && $p_wachtwoord === "12345isnotsecure") {
         return true;
     } else {
