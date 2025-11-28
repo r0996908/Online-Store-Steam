@@ -60,6 +60,10 @@ if (!empty($_POST)) {
                 <div class= "fillbox">
                     <input type="submit" value="LogIn">
                 </div>
+
+                <div>
+                    <a href="signup.php">Dont have an account yet? Sign up here</a>
+                </div>
             </form>
         </div>
     </head>

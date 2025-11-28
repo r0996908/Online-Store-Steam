@@ -26,6 +26,10 @@
                 <div class= "fillbox">
                     <input type="submit" value="SignUp">
                 </div>
+
+                <div>
+                    <a href="login.php">Already have an account? Log In here</a>
+                </div>
             </form>
         </div>
     </head>
