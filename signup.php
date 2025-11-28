@@ -1,11 +1,26 @@
 <?php
+if(!empty($_POST)) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
+    $options = [
+    'cost' => 14,
+];
+    $password = password_hash($password, PASSWORD_BCRYPT, $options);
+
+    $conn = new PDO('mysql:host=localhost;dbname=claysme', "root", "");
+    $statement = $conn->prepare('INSERT INTO users (email, paswword, is_admin) VALUE :email, :password, false)');
+    $statement->bindValue(":email", $email);
+    $statement->bindValue(":password", $password);
+    $statement->execute();
+
+}
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
 </head>
 <body>
     <head>
