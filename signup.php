@@ -9,7 +9,7 @@ if(!empty($_POST)) {
     $password = password_hash($password, PASSWORD_BCRYPT, $options);
 
     $conn = new PDO('mysql:host=localhost;dbname=claysme', "root", "");
-    $statement = $conn->prepare('INSERT INTO users (email, paswword, is_admin) VALUE :email, :password, false)');
+    $statement = $conn->prepare('INSERT INTO user (email, password, is_admin) VALUE :email, :password, FALSE)');
     $statement->bindValue(":email", $email);
     $statement->bindValue(":password", $password);
     $statement->execute();
@@ -29,13 +29,13 @@ if(!empty($_POST)) {
                 <h2>Signup</h2>
 
                 <div class= "fillbox">
-                    <label for="Email">E-mail</label>
-                    <input type="email" name="Email"> 
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email"> 
                 </div>
 
                 <div class= "fillbox">
-                    <label for="Password">password</label>
-                    <input type="password" name="Password">
+                    <label for="password">password</label>
+                    <input type="password" name="password">
                 </div>
 
                 <div class= "fillbox">
