@@ -1,7 +1,7 @@
 <?php 
 function CorrectLogin($p_email, $p_password) {
     $conn = new PDO('mysql:host=localhost;dbname=claysme', "root", "");
-    $statement = $conn->prepare('SELECT * FROM user WHERE email = :email, password = :password');
+    $statement = $conn->prepare('SELECT * FROM user WHERE email = :email AND password = :password');
     $statement->bindValue(":email", $p_email);
     $statement->bindValue(":password", $p_password);
     $statement->execute();
