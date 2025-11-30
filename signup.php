@@ -9,7 +9,7 @@ if(!empty($_POST)) {
     $password = password_hash($password, PASSWORD_BCRYPT, $options);
 
     $conn = new PDO('mysql:host=localhost;dbname=claysme', "root", "");
-    $statement = $conn->prepare('INSERT INTO user (email, password, is_admin) VALUE :email, :password, FALSE)');
+    $statement = $conn->prepare('INSERT INTO user (email, password, is_admin) VALUE (:email, :password, FALSE)');
     $statement->bindValue(":email", $email);
     $statement->bindValue(":password", $password);
     $statement->execute();
