@@ -1,12 +1,12 @@
-<?php 
+<?php //HCV(dno§"b$=* pw azure
 function CorrectLogin($p_email, $p_password) {
     $conn = new PDO('mysql:host=localhost;dbname=claysme', "root", "");
     $statement = $conn->prepare('SELECT * FROM user WHERE email = :email AND password = :password');
     $statement->bindValue(":email", $p_email);
     $statement->bindValue(":password", $p_password);
     $statement->execute();
-    $users = $statement->fetch(PDO::FETCH_ASSOC);
-    if ($p_email === "salma@claysme.com" && $p_password === "12345isnotsecure") {
+    $user = $statement->fetch(PDO::FETCH_ASSOC);
+    if ($p_email === "salma@claysme.com" && $p_password === "12345isnotsecure"|| password_verify($p_password, $user['Password'])) {
         return true;
     } else {
         return false;
