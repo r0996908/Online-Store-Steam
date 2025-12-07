@@ -34,13 +34,13 @@ if (!empty($_POST)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Login</title>
 </head>
 <body>
     <head>
         <div>
             <form action="" method="post">
-                <h2>Login</h2>
+                <h2>Test</h2>
 
                 <?php if (isset($error)):?>
                 <div style="color:red" class="LoginError">
