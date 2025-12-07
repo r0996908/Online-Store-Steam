@@ -40,7 +40,7 @@ if (!empty($_POST)) {
     <head>
         <div>
             <form action="" method="post">
-                <h2>Test</h2>
+                <h2>Login</h2>
 
                 <?php if (isset($error)):?>
                 <div style="color:red" class="LoginError">
